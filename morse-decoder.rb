@@ -41,3 +41,17 @@ CODES =
 def decode_character(char)
 	CODES[char].upcase
 end
+
+def decode_word(word)
+	decoded_word = ""
+	letters_of_word = word.split
+	letters_of_word.each{|n| puts decoded_word += decode_character(n)}
+	decoded_word
+end
+
+def decode_sentence(sentence)
+	decoded_sentence = ""
+	words_of_sentence = sentence.split(“   ")
+	words_of_sentence.each{|n| decoded_sentence += " " + decode_word(n)}
+	decoded_sentence = decoded_sentence[1..-1]
+end
