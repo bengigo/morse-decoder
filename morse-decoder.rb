@@ -51,7 +51,7 @@ end
 
 def decode_sentence(sentence)
 	decoded_sentence = ""
-	words_of_sentence = sentence.split(“   ")
+	words_of_sentence = sentence.split("   ")
 	words_of_sentence.each{|n| decoded_sentence += " " + decode_word(n)}
 	decoded_sentence = decoded_sentence[1..-1]
 end
